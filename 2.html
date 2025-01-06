@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود نام</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f3f3f3;
+        
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #box {
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 24px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+   
+    <div id="box">
+        <input type="text" id="nameInput" placeholder="اسم خود را وارد کنید">
+        <button onclick="checkName()">تایید</button>
+    </div>
+    <div id="message"></div>
+
+    <script>
+        function checkName() {
+            const name = document.getElementById('nameInput').value.trim();
+            const messageDiv = document.getElementById('message');
+            if (name === "ثنا") {
+                document.body.innerHTML = "<h1 style='color: rgb(238, 18, 183);'>کوتوله ۱۴۵ سانتی</h1>";
+            } else {
+                messageDiv.textContent = "اسم شما ثبت شد: " + name;
+            }
+        }
+    </script>
+</body>
+</html>
